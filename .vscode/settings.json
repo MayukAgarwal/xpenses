@@ -1,0 +1,25 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#b1605e",
+        "activityBar.background": "#b1605e",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#7ec180",
+        "activityBarBadge.foreground": "#15202b",
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#b1605e",
+        "statusBar.background": "#944a48",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#b1605e",
+        "statusBarItem.remoteBackground": "#944a48",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeBackground": "#944a48",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#944a4899",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#944a48",
+    "cSpell.words": [
+        "xpenses"
+    ]
+}
