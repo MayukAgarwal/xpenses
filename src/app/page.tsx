@@ -1,57 +1,113 @@
 "use client";
 import React from "react";
+import NetWorth from "./components/netWorthCard/net.worth";
+
+const skeleton = (
+  <div
+    role="status"
+    className="max-w-lg border rounded-2xl shadow w-96 p-4 m-2 space-y-4 border-gray-200 divide-y divide-gray-200 animate-pulse dark:divide-gray-700 md:p-6 dark:border-gray-700"
+  >
+    <div className="flex items-center justify-between">
+      <div>
+        <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
+        <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+      </div>
+      <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+    </div>
+    <div className="flex items-center justify-between pt-4">
+      <div>
+        <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
+        <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+      </div>
+      <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+    </div>
+    <div className="flex items-center justify-between pt-4">
+      <div>
+        <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
+        <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+      </div>
+      <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+    </div>
+    <div className="flex items-center justify-between pt-4">
+      <div>
+        <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
+        <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+      </div>
+      <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+    </div>
+    <div className="flex items-center justify-between pt-4">
+      <div>
+        <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24 mb-2.5"></div>
+        <div className="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+      </div>
+      <div className="h-2.5 bg-gray-300 rounded-full dark:bg-gray-700 w-12"></div>
+    </div>
+    <span className="sr-only">Loading...</span>
+  </div>
+);
+
+const skeletonGraph = (
+  <div
+    role="status"
+    className="w-full sm:w-2/5 p-4 m-2 border rounded-2xl shadow border-gray-200 animate-pulse md:p-6 dark:border-gray-700 "
+  >
+    <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-32 mb-2.5"></div>
+    <div className="w-48 h-2 mb-10 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+    <div className="flex items-baseline mt-4 space-x-6">
+      <div className="w-full bg-gray-200 rounded-t-lg h-72 dark:bg-gray-700"></div>
+      <div className="w-full h-56 bg-gray-200 rounded-t-lg dark:bg-gray-700"></div>
+      <div className="w-full bg-gray-200 rounded-t-lg h-72 dark:bg-gray-700"></div>
+      <div className="w-full h-64 bg-gray-200 rounded-t-lg dark:bg-gray-700"></div>
+      <div className="w-full bg-gray-200 rounded-t-lg h-80 dark:bg-gray-700"></div>
+      <div className="w-full bg-gray-200 rounded-t-lg h-72 dark:bg-gray-700"></div>
+      <div className="w-full bg-gray-200 rounded-t-lg h-80 dark:bg-gray-700"></div>
+    </div>
+    <span className="sr-only">Loading...</span>
+  </div>
+);
 
 const Home = () => {
+  const populateCards = () => {
+    return (
+      <a
+        href="#"
+        className="block max-w-xs   p-6 border rounded-2xl shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 m-2"
+        style={{ background: "#282A3A" }}
+      >
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          Noteworthy technology acquisitions 2021
+        </h5>
+        <p className="font-normal text-gray-700 dark:text-gray-400">
+          Here are the biggest enterprise technology acquisitions of 2021 so
+          far, in reverse chronological order.
+        </p>
+      </a>
+    );
+  };
+
   return (
-    <div className="bg-white h-screen">
-      <header className="absolute inset-x-0 top-0 z-50"></header>
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-          aria-hidden="true"
-        >
-          <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"></div>
-        </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              Announcing our next round of funding.{" "}
-              <a href="#" className="font-semibold text-indigo-600">
-                <span className="absolute inset-0" aria-hidden="true"></span>
-                Read more <span aria-hidden="true">&rarr;</span>
-              </a>
+    <div className="h-screen">
+      <div className="flex flex-wrap justify-center">
+        <div className="flex flex-wrap justify-center md:w-3/4 sm:w-full ">
+          <div className="flex flex-wrap justify-center">
+            <div className="w-full sm:w-1/4">
+              <NetWorth data={"$90,000"} loading={true} />
+              {populateCards()}
             </div>
+            <div>
+              {populateCards()}
+              {populateCards()}
+            </div>
+            <div className="flex">{skeleton}</div>
           </div>
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Data to enrich your online business
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Get started
-              </a>
-              <a
-                href="#"
-                className="text-sm font-semibold leading-6 text-gray-900"
-              >
-                Learn more <span aria-hidden="true">→</span>
-              </a>
-            </div>
+          <div className="flex flex-wrap justify-center w-full">
+            {skeletonGraph}
+            {skeletonGraph}
           </div>
         </div>
-        <div
-          className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-          aria-hidden="true"
-        >
-          <div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"></div>
+        <div className="flex flex-wrap justify-center md:w-1/5 sm:w-full">
+          {populateCards()}
+          {populateCards()}
         </div>
       </div>
     </div>

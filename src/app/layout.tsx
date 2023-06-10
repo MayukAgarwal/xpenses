@@ -1,7 +1,7 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Varela_Round } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const varela = Varela_Round({ weight: "400", subsets: ["latin"] });
 
 export const metadata = {
   title: "Xpenses",
@@ -15,7 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={varela.className} style={{ background: "#000000" }}>
+        {children}
+      </body>
     </html>
   );
 }
